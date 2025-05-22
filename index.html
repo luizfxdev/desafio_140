@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrador Alienígena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    
+    <div class="container">
+        <h1>Cifrador Alienígena 🛸</h1>
+        <p class="description">Decifre mensagens alienígenas rotacionando consoantes para a próxima no alfabeto</p>
+        
+        <div class="input-group">
+            <label for="message">Mensagem Cifrada:</label>
+            <input type="text" id="message" placeholder="Digite a mensagem alienígena...">
+        </div>
+        
+        <div class="button-group">
+            <button class="btn" id="decipher">
+                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                </svg>
+                <span>DECIFRAR</span>
+            </button>
+            
+            <button class="btn" id="return">
+                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                </svg>
+                <span>RETORNAR</span>
+            </button>
+        </div>
+        
+        <div class="result-container">
+            <label for="result">Mensagem Decifrada:</label>
+            <div id="result" class="result-box"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="matrix.js"></script>
+</body>
+</html>
